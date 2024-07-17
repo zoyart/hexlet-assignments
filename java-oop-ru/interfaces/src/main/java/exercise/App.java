@@ -18,10 +18,13 @@ public class App {
         System.out.println(buildApartmentsList(apartments, 3));
     }
 
-    public static List<Home> buildApartmentsList(List<Home> apartmentsList, int count) {
+    public static List<String> buildApartmentsList(List<Home> apartmentsList, int count) {
         List<Home> result = new ArrayList<>(apartmentsList);
-        result.sort(Comparator.comparing(Home::getArea));
-        return result.stream().limit(count).collect(Collectors.toList());
+        return result.stream()
+                .sorted(Comparator.comparingDouble(Home::getArea))
+                .map(Home::toString)
+                .limit(count)
+                .collect(Collectors.toList());
     }
 }
 // END
