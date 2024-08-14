@@ -15,7 +15,7 @@ public final class App {
     public static void main(String[] args) {
         Javalin app = getApp();
 
-        app.get("/", context -> context.result("Welcome to Hexlet!"));
+        app.get("/welcome", context -> context.result("Welcome to Hexlet!"));
 
         app.start(7070);
     }
