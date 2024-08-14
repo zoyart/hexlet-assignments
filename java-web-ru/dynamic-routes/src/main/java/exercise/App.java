@@ -3,10 +3,8 @@ package exercise;
 import io.javalin.Javalin;
 import io.javalin.http.NotFoundResponse;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 // BEGIN
 
